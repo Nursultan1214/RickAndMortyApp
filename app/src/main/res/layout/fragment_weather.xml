@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.weatherFrag.WeatherFragment">
+
+    <ImageView
+        android:id="@+id/iv_city"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleX="1.1"
+        android:src="@drawable/graphic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="160dp"
+        android:textColor="@color/grey"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_city"
+        tools:text="Sunday, 19 May 2019  |  4:30PM" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="10dp"
+        android:drawableEnd="@drawable/ic_place"
+        android:gravity="end"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/iv_city"
+        tools:text="Mumbai, India" />
+
+    <ImageView
+        android:id="@+id/iv_cloud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="280dp"
+        android:src="@drawable/ic_cloud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_sky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cloud"
+        tools:text="Sunny" />
+
+    <TextView
+
+        android:id="@+id/tv_gradusy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="78sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        tools:layout_editor_absoluteX="-93dp"
+        tools:text="33°C" />
+
+    <TextView
+        android:id="@+id/tv_maxtemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="end"
+        android:textColor="@color/grey"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location"
+        tools:text="35°" />
+
+    <TextView
+        android:id="@+id/tv_mintemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:gravity="end"
+        android:textColor="@color/grey"
+        android:textSize="26dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_maxtemperature"
+        tools:text="27°" />
+
+    <ImageView
+        android:id="@+id/iv_tarrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_toparrow"
+        app:layout_constraintStart_toEndOf="@+id/tv_maxtemperature"
+        app:layout_constraintTop_toBottomOf="@id/tv_location" />\
+
+    <ImageView
+        android:id="@+id/barrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bottomarrow"
+        app:layout_constraintStart_toEndOf="@+id/tv_mintemperature"
+        app:layout_constraintTop_toBottomOf="@id/iv_tarrow" />
+
+    <ImageView
+        android:id="@+id/iv_humiditly"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="278dp"
+        android:src="@drawable/ic_humidity"
+        app:layout_constraintTop_toBottomOf="@id/tv_sky" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:gravity="start"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_humiditly"
+        tools:text="49%" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/percent"
+        tools:text="Humidity" />
+
+    <ImageView
+        android:id="@+id/iv_pressure"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gradusy" />
+
+    <TextView
+        android:id="@+id/tv_pressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_pressure"
+        tools:text="1,007mBar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pressure"
+        tools:text="Pressure" />
+
+    <ImageView
+        android:id="@+id/wind"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_wind"
+        app:layout_constraintTop_toBottomOf="@id/tv_mintemperature" />
+
+    <TextView
+        android:id="@+id/tv_wind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="46dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/wind"
+        tools:text="23 km/h" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:gravity="end"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wind"
+        tools:text="Wind" />
+
+    <ImageView
+
+        android:id="@+id/tv_sunrise"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="265dp"
+        android:src="@drawable/iv_sunny"
+        app:layout_constraintTop_toBottomOf="@id/percent" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sunrise"
+        tools:text="6:03 AM" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        tools:text="Sunrise" />
+
+    <ImageView
+        android:id="@+id/iv_sunset"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pressure" />
+
+    <TextView
+        android:id="@+id/sunsettime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/iv_sunset"
+        tools:text="7:05 PM" />
+
+    <TextView
+        android:id="@+id/tv_sunset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/sunsettime"
+        tools:text="Sunset" />
+
+    <ImageView
+        android:id="@+id/iv_daytime"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_timer"
+        app:layout_constraintTop_toBottomOf="@id/tv_wind" />
+
+    <TextView
+        android:id="@+id/tv_daytime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:foregroundGravity=""
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_daytime"
+        tools:text="13h 1m" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@+id/tv_daytime"
+        tools:text="Daytime" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
